@@ -8,6 +8,8 @@ contract Campaign{
         uint value;
         address recipient;
         bool complete;
+        // uint approvalCount;
+        // mapping (address => bool)  approvals;
     }
 
 //create instance of Request struct for use in contract
@@ -16,7 +18,7 @@ contract Campaign{
     address public manager;
     uint public minimumContribution;
 
-    address[] public approvers;
+    mapping (address => bool) public approvers;
 
 //modifier to check the manager address
     modifier restricted(){
@@ -24,7 +26,7 @@ contract Campaign{
         _;
     }
 
-//set address of manager and mincontribution value is passed on deploy time
+//set address of manager and mincontribution value to be set is passed on deploy time
     constructor (uint minimum)  {
         minimumContribution = minimum;
         manager = msg.sender;
@@ -34,7 +36,7 @@ contract Campaign{
     function contribute() public payable {
         require(msg.value >= minimumContribution);
 
-        approvers.push(msg.sender);
+        approvers[msg.sender] = true;
     }
 
 // create request for donation, checks its only by manager, and add it to reuests array
@@ -44,9 +46,10 @@ contract Campaign{
             value: value,
             recipient: recipient,
             complete: false
+            //approvalCount: 0
         });
 
         requsts.push(newRequest);
-
+        //commit
     }
 }

@@ -43,6 +43,29 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					}
+				],
+				"name": "createRequest",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "manager",
 				"outputs": [
@@ -63,6 +86,40 @@
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "requsts",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "complete",
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -97,11 +154,11 @@
 	},
 	"sources": {
 		"MediTrust/mainContract.sol": {
-			"keccak256": "0xaf08b5db4a325dd51bea5db54de0b963c6b9712193c0e469443ca532d8910194",
+			"keccak256": "0x101d268f9bd75d322c4be25529c6e237d66c5f77573cf827f9c6496d69d073b1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ec735ac3f104275aba850d46d9523d53656106c01ebcf5822f07e8714ac8d59c",
-				"dweb:/ipfs/QmRf11KwMx41pcvuXHaaVbAjMERyvQe8cdry12iGwWsngg"
+				"bzz-raw://b2aa2f95c16fd2ca87f369f341fd7c03189876166f2c9da5593789939cca9c99",
+				"dweb:/ipfs/QmbG48YkNjVGPT2qEkvCQTAgEWnsDiLGRJPN27VNmuWTEh"
 			]
 		}
 	},
