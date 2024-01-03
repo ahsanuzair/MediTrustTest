@@ -11,6 +11,11 @@
 						"internalType": "uint256",
 						"name": "minimum",
 						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "campaignCreator",
+						"type": "address"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -19,17 +24,17 @@
 			{
 				"inputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "address",
 						"name": "",
-						"type": "uint256"
+						"type": "address"
 					}
 				],
 				"name": "approvers",
 				"outputs": [
 					{
-						"internalType": "address",
+						"internalType": "bool",
 						"name": "",
-						"type": "address"
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -55,7 +60,7 @@
 						"type": "uint256"
 					},
 					{
-						"internalType": "address",
+						"internalType": "address payable",
 						"name": "recipient",
 						"type": "address"
 					}
@@ -63,6 +68,19 @@
 				"name": "createRequest",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "finalizeRequest",
+				"outputs": [],
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
@@ -112,7 +130,7 @@
 						"type": "uint256"
 					},
 					{
-						"internalType": "address",
+						"internalType": "address payable",
 						"name": "recipient",
 						"type": "address"
 					},
@@ -154,11 +172,11 @@
 	},
 	"sources": {
 		"MediTrust/mainContract.sol": {
-			"keccak256": "0x101d268f9bd75d322c4be25529c6e237d66c5f77573cf827f9c6496d69d073b1",
+			"keccak256": "0x806d0e8dbff71bb55de9495bcfdf73c530a2a860439710dc740a07438313812c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b2aa2f95c16fd2ca87f369f341fd7c03189876166f2c9da5593789939cca9c99",
-				"dweb:/ipfs/QmbG48YkNjVGPT2qEkvCQTAgEWnsDiLGRJPN27VNmuWTEh"
+				"bzz-raw://a9e341e097165c81afb82c9a42ee496ec1091429ff0e1d5a01d717048f6bd820",
+				"dweb:/ipfs/QmesWJvqbvRDjtNuTZF1AH2BaUTEuXDtUpTUDKJZCC21qx"
 			]
 		}
 	},
